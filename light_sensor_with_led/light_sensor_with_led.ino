@@ -35,7 +35,7 @@ void loop(){
     // set led brightness as a percentage of max
     int deltaCurrAndMin = (currLightRead - minRead);
     int deltaMaxAndMin = (maxRead - minRead);
-    int ledBrightness = (deltaCurrAndMin * 1.0 / deltaMaxAndMin)* maxBrightness;
+    int ledBrightness = (deltaCurrAndMin * 1.0 / deltaMaxAndMin) * maxBrightness;
     analogWrite(led, ledBrightness);
     Serial.print(" LED: ");
     Serial.print(ledBrightness);
